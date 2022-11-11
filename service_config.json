@@ -1,0 +1,42 @@
+{
+    "AuthSecurity": {
+        "userName": "testClient",
+        "password": "encrypted#XV4syykVKW90g0KwHiKDa4zKbGrsuhRPfOVhnzXPdKdPtgR2elpf4Q==",
+        "headerPref": "Basic"
+    },
+    "dbConfiguration": {
+        "dbHost": "127.0.0.1",
+        "dbPort": 5432,
+        "dbUsername": "postgres",
+        "dbPassword": "encrypted#l4kxL3Tp1XpFu8FVn1cnag==",
+        "dbName": "drone-services"
+    },
+    "templateUpload": {
+        "tempplatedInFolder": "./eventUploadFolder",
+        "failedRequestFolder": "./failedTemplateUpload"
+    },
+    "apiService": {
+        "serviceHost": "0.0.0.0",
+        "servicePort": 56080,
+        "serviceRestConfigComponent": "netty-http"
+    },
+    "resiciliency": {
+        "cacheType": "file",
+        "processingRequestQueue": "./processingRequestQueue",
+        "pendingRequestQueue": "./pendingSMSRequests",
+        "loadingRequestQueue": "./loadingStateRequests",
+        "deliveringProcessQueue": "./deliveringProcessQueue",
+        "failedRequestQueue": "./failedSMSRequests",
+        "smscSubmitRetryCount": 1,
+        "pendingRequestRetry": {
+            "messageTypesRetryOrder": "HIGH;NORMAL;LOW;others",
+            "messageTypesRetryOrderDelay": 2,
+            "retryFrequency": {
+                "hours": 0,
+                "minutes": 1,
+                "seconds": 0
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,1 @@
+java -cp .;./target/baobabConsentServiceV1.jar com.musala.drone.service.main.DroneMainApp

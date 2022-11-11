@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="zip-test" default="zip" basedir=".">
+
+	<!-- <property name="project-name" value="${ant.project.name}" /> -->
+	<property name="zip-file-name" value="sms-service-dist.zip" />
+	<!-- <property name="unzip-destination" value="unzipped" /> -->
+
+	<!-- <target name="clean"> -->
+		<!-- <delete file="${project-name}.zip" /> -->
+		<!-- <delete dir="${unzip-destination}" /> -->
+	<!-- </target> -->
+
+	<!-- <target name="zip"> -->
+		<!-- <zip destfile="${project-name}.zip" basedir="${folder-to-zip}" excludes="dont*.*" /> -->
+	<!-- </target> -->
+
+	<!-- <target name="unzip"> -->
+		<!-- <unzip src="${project-name}.zip" dest="${unzip-destination}" /> -->
+	<!-- </target> -->
+	
+	<!-- <mkdir dir="DirToBeZipped"/> -->
+	
+	<!-- <copy todir="DirToBeZipped"> -->
+		<!-- <fileset dir="foo" includes="*"/> -->
+	<!-- </copy> -->
+	<!-- <zip destfile="YourZipName.zip" basedir="DirToBeZipped"/> -->
+	
+	<target name="zip">
+		<delete file="${zip-file-name}"/>
+		<zip destfile="${zip-file-name}" >
+			 <zipfileset dir="target" includes="*.jar" prefix="target"/>
+			 <zipfileset dir="validationSchema" includes="*" prefix="validationSchema"/>
+			 <zipfileset dir="keystore" includes="*" prefix="keystore"/>
+			 <zipfileset dir="uploadFileTemplates" includes="*" prefix="uploadFileTemplates"/>
+			 <zipfileset dir="dbscripts" includes="*" prefix="dbscripts"/>
+			 <zipfileset dir="." includes="service_config.json" />
+			 <zipfileset dir="." includes="log4j2.xml" />
+		</zip>
+	</target>
+
+</project>

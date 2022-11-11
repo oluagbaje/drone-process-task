@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Appenders>
+
+		<RollingFile name="roll-by-time-and-size"
+			fileName="logs/SMSService.log"
+			filePattern="logs/SMSService.%d{MM-dd-yyyy}.%i.log.gz"
+			ignoreExceptions="false" immediateFlush="true">
+			<!-- <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/> -->
+			<PatternLayout>
+				<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%logger{36}] %spi%n
+				</Pattern>
+			</PatternLayout>
+			<Policies>
+				<SizeBasedTriggeringPolicy size="50MB" />
+				<TimeBasedTriggeringPolicy />
+			</Policies>
+			<DefaultRolloverStrategy>
+				<Delete basePath="${baseDir}" maxDepth="2">
+					<IfFileName
+						glob="target/log4j2/roll-by-time-and-size/app.*.log.gz" />
+					<IfLastModified age="20d" />
+				</Delete>
+			</DefaultRolloverStrategy>
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<logger name="org.apache.http" level="debug" additivity="false">
+			<AppenderRef ref="roll-by-time-and-size" />
+		</logger>
+		<logger name="org.apache.http.impl.conn" level="debug"
+			additivity="false">
+			<AppenderRef ref="roll-by-time-and-size" />
+		</logger>
+		<logger name="org.apache.http.impl.client" level="debug"
+			additivity="false">
+			<AppenderRef ref="roll-by-time-and-size" />
+		</logger>
+		<logger name="org.apache.http.client" level="debug"
+			additivity="false">
+			<AppenderRef ref="roll-by-time-and-size" />
+		</logger>
+
+		<Root level="info">
+			<!-- <AppenderRef ref="Console" /> -->
+			<AppenderRef ref="roll-by-time-and-size" />
+		</Root>
+		
+	</Loggers>
+</Configuration>
