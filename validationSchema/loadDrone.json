@@ -1,0 +1,31 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "definitions":{
+
+   },
+   "id":"registration",
+   "type":"object",
+   "properties":{
+      "droneSerialNumber":{
+         "type":"string"
+      },
+      "medCode":{
+         "type":"string"
+      },
+ 
+      "sourceLocation":{
+         "type":"string"
+      },
+      "destinationLocation":{
+         "type":"string"
+      }
+
+   },
+   "required":[
+     "droneSerialNumber",
+      "medCode",
+      "sourceLocation",
+      "destinationLocation"
+  
+   ]
+}

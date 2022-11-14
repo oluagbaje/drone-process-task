@@ -1,0 +1,47 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "definitions":{
+      
+   },
+   "id":"notificationRequestTemplateSchema",
+   "type":"object",
+   "properties":{
+      "destination_address":{
+         "type":"string"
+      },
+      "event_name":{
+         "type":"string"
+      },
+      "template_parameters":{
+         "type":"array",
+         "items":{
+            "type":"object",
+            "properties":{
+               "name":{
+                  "type":"string"
+               },
+               "value":{
+                  "type":"string"
+               }
+            },
+            "required":[
+               "name",
+               "value"
+            ]
+         }
+      },
+	  "priority":{
+         "type":"string",
+         "enum":[
+            "HIGH",
+            "NORMAL",
+            "LOW"
+         ]
+      }
+   },
+   "required":[
+     "destination_address",
+      "event_name",
+      "template_parameters"
+   ]
+}

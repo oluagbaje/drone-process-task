@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NOTIFICATION_EVENT>
+  <EVENT_ID>NOTIF.SMS_SEND.ACR.CANC</EVENT_ID>
+  <EVENT_NAME>NOTIF.SMS</EVENT_NAME>
+  <COUNTRY_CODE>NG</COUNTRY_CODE>
+  <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+  <MESSAGE_TYPE>Transactional</MESSAGE_TYPE>
+  <SMS_TEMPLATES>	
+	<TEMPLATE>
+		<LANGUAGE>EN</LANGUAGE>
+		<CONTENT>
+			Dear customer, your subscription to Hospicash and Life cover has been canceled. Call 08130812526 for more details.  
+		</CONTENT>
+	</TEMPLATE>
+	
+	<TEMPLATE>
+		<LANGUAGE>FR</LANGUAGE>
+		<CONTENT>
+			Cher client, votre souscription aux garanties Hospicash et Vie a été annulée. Appelez le 08130812526 pour plus de détails.
+		</CONTENT>
+	</TEMPLATE>
+	
+	
+	
+  </SMS_TEMPLATES>
+
+</NOTIFICATION_EVENT>

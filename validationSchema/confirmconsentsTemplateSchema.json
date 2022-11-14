@@ -1,0 +1,40 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "definitions":{
+      
+   },
+   "id":"confirmconsentsTemplateSchema",
+   "type":"object",
+   "properties":{
+      "consent":{
+         "type":"string"
+      },
+      "customerRecord":{
+         "type":"string"
+      },
+      "email":{
+         "type":"string"
+      },
+      "firstName":{
+         "type":"string"
+      },
+      "lastName":{
+         "type":"string"
+      },
+      "contract":{
+         "type":"string"
+      },
+        "languages":{
+         "type":"string"
+      }
+
+   },
+   "required":[
+     "consent",
+      "customerRecord",
+      "email",
+      "firstName",
+      "lastName",
+      "contract"
+   ]
+}

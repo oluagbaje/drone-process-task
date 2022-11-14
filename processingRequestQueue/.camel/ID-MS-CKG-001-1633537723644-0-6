@@ -1,0 +1,1 @@
+{"countryCode":"NG","destinationAdress":"2348025869015","eventName":"FUNDS_TRANSFER","languageCode":"EN","templateId":"53","message":"DEAR fola babalola your account 0000343333 has been debited with USD88,000:00. thanks","priority":2,"messageTemplate":"DEAR {{customer_name}} your account {{account_no}} has been debited with {{debit_amount}}. thanks"}

@@ -1,0 +1,535 @@
+<NOTIFICATION_EVENTS>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>abacus-deposit_CI</EVENT_ID>
+    <EVENT_NAME>abacus-deposit</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>EN</LANGUAGE>
+        <CONTENT>Deposit in Account# ${AccountNumber} for ${Currency} ${TransactionAmount} on ${TransactionDate}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>abacus-funds transfer-recipient_CI</EVENT_ID>
+    <EVENT_NAME>abacus-funds transfer-recipient</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>EN</LANGUAGE>
+        <CONTENT>You just received ${Currency} ${TransactionAmount} from Account# ${AccountNumberSource} to Your Account # ${AccountNumberDestination} on ${TransactionDate}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>abacus-funds transfer-sender_CI</EVENT_ID>
+    <EVENT_NAME>abacus-funds transfer-sender</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>EN</LANGUAGE>
+        <CONTENT>You just sent ${Currency} ${TransactionAmount} from Account# ${AccountNumberSource} to Your Account # ${AccountNumberDestination} on ${TransactionDate}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>abacus-withdrawal_CI</EVENT_ID>
+    <EVENT_NAME>abacus-withdrawal</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>EN</LANGUAGE>
+        <CONTENT>Withdrawal from Account# ${AccountNumber} for ${Currency} ${TransactionAmount} on ${TransactionDate}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>ACCEVENT_CREDIT_CI</EVENT_ID>
+    <EVENT_NAME>ACCEVENT_CREDIT</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Le montant de ${params.AMOUNT} FCFA a ete depose sur votre compte ${params.ACCOUNT}. Baobab vous remercie.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>ACCEVENT_DEBIT_CI</EVENT_ID>
+    <EVENT_NAME>ACCEVENT_DEBIT</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Vous avez retire ${params.AMOUNT} FCFA sur votre compte ${params.ACCOUNT}. Baobab vous remercie.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>ACCEVENT_LDDISBR_CI</EVENT_ID>
+    <EVENT_NAME>ACCEVENT_LDDISBR</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Cher client, un nouveau pret  a ete decaisse  pour un montant de  ${params.AMOUNT} Fcfa sur votre compte ${params.ACCOUNT}. Baobab vous remercie.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>ACCMINBALEVENT_CI</EVENT_ID>
+    <EVENT_NAME>ACCMINBALEVENT</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Le solde de votre compte ${params.ACCT.NUMBER} a atteint le montant minimum de ${params.ACCT.MIN.AMT}. Baobab vous remercie</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>atm-cash withdrawal_CI</EVENT_ID>
+    <EVENT_NAME>atm-cash withdrawal</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>EN</LANGUAGE>
+        <CONTENT>Hello ${params.account1}  account has been withdrawed with ${params.amount}.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>atm-supplies_CI</EVENT_ID>
+    <EVENT_NAME>atm-supplies</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>EN</LANGUAGE>
+        <CONTENT>${params.statusdescription}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>AUTO.RENEW_ELIG_CI</EVENT_ID>
+    <EVENT_NAME>AUTO.RENEW_ELIG</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Bonjour ${params.FIRSTNAME}! Renouvelez votre credit pour un montant de ${params.AMOUNT} FCFA. Rendez-vous en agence pour retirer votre argent immediatement.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>BDAYEVENT_CI</EVENT_ID>
+    <EVENT_NAME>BDAYEVENT</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Baobab vous souhaite un Joyeux Anniversaire et nos meilleurs voeux.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>LOANREPMNTEVENT_CI</EVENT_ID>
+    <EVENT_NAME>LOANREPMNTEVENT</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Votre echeance du ${params.INSTALLMENT.DATE} a ete  regle pour un montant de ${params.INSTALLMENT.AMT} . ${params.LD.NUMBER} . Baobab vous remercie</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_1WD.FIRST.MONTH_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_1WD.FIRST.MONTH</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>
+Bonjour ${params.firstname}! Rembourse ${params.nano_loan_amount} ${params.currency}  avant le ${params.maturity_date} pour beneficier d’un autre credit TAKA!
+</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_1WD.THIRD.MONTH_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_1WD.THIRD.MONTH</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>${params.firstname}, ton TAKA finit le ${params.maturity_date}! Rembourse ${params.nano_loan_amount} ${params.currency} et evite les problemes. Infos au  ${params.call_center_number}.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_1WD.TWO.WEEKS_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_1WD.TWO.WEEKS</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Ne rate pas l'occasion ${params.firstname}! Rembourse ${params.nano_loan_amount} ${params.currency} avant le ${params.maturity_date} pour augmenter ton TAKA! Infos au  ${params.call_center_number}.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_DISBURSE_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_DISBURSE</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Bravo ! Ton TAKA est sur ton compte! Rembourse ${params.nano_loan_amount} ${params.currency} avant le ${params.maturity_date}: un bon client rembourse vite!</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_FIRST.MONTH_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_FIRST.MONTH</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>TAKA rembourse en moins d un mois! Tu es un client serieux! RDV bientot pour une nouvelle offre TAKA !</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_PD.THIRD.MONTH_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_PD.THIRD.MONTH</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>${params.firstname}, tu es en retard de plus de 2 mois. Ton gestionnaire de portefeuille est prevenu. Merci de rembourser ${params.nano.loan.amount.fees} au plus vite</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_SECOND.MONTH_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_SECOND.MONTH</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>TAKA rembourse avec un retard de ${params.days_after_first_month} jours. Patiente quelques semaines pour une nouvelle offre TAKA
+</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_SECOND.MONTH.FIRST.WEEK_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_SECOND.MONTH.FIRST.WEEK</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>TAKA rembourse avec un retard de ${params.days_after_first_month} jours. Patiente un peu pour une nouvelle offre TAKA.
+</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_THIRD.MONTH_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_THIRD.MONTH</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>TAKA rembourse avec un retard de ${params.days_after_first_month} jours. Il faudra patienter plusieurs mois pour une nouvelle offre TAKA</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_TWO.WEEKS_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_TWO.WEEKS</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Bravo ${params.firstname} ! TAKA rembourse ${params.days_before_maturity} jours avant l'echeance! Tu es un client exemplaire! RDV bientot pour une nouvelle offre TAKA
+</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>REPMNTEVENT_CI</EVENT_ID>
+    <EVENT_NAME>REPMNTEVENT</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>La date limite de la prochaine echeance de votre pret ${params.LD.NUMBER} est le ${params.NEXT.INST.DATE} pour un montant de ${params.REPAYMENT.AMT}..</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>UPDPHONE_CI</EVENT_ID>
+    <EVENT_NAME>UPDPHONE</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Votre numero de telephone a ete modifie le ${params.DATE} a ${params.TIME}. Si vous n'etes pas a l'origine de ce changement, contactez le service client Baobab au plus vite. Merci</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NOTIF.SMS_TT_DR_CI_CI</EVENT_ID>
+    <EVENT_NAME>NOTIF.SMS_TT_DR_CI</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Vous avez retire  sur votre compte ${params.trans_amt} ${params.curr_code} sur votre compte ${params.acct_type} N ${params.nuban_no}. ${params.tt_id}.  Baobab vous remercie.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NOTIF.SMS_TT_CR_CI_CI</EVENT_ID>
+    <EVENT_NAME>NOTIF.SMS_TT_CR_CI</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Le montant de ${params.trans_amt}  ${params.curr_code} a ete depose sur votre compte ${params.acct_type} N  ${params.nuban_no}. ${params.tt_id}. Baobab vous remercie.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NOTIF.SMS_LB_CI_CI</EVENT_ID>
+    <EVENT_NAME>NOTIF.SMS_LB_CI</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Votre pret ${params.ld_id} a ete decaisse pour un montant de ${params.trans_amt}  ${params.curr_code} sur votre compte ${params.acct_no}. Baobab vous remercie.</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NANO.LOANS_TAKA.OFFER_CI</EVENT_ID>
+    <EVENT_NAME>NANO.LOANS_TAKA.OFFER</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Besoin d argent ${params.firstname}? Baobab te prete ${params.nano_loan_amount} ${params.currency}. Demande TAKA au point Baobab. Immediat. Discret. Infos au  ${params.call_center_number}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NOTIF.SMS_SEND.TT.CR_CI</EVENT_ID>
+    <EVENT_NAME>NOTIF.SMS_SEND.TT.CR</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Le montant de ${params.trans_amt} ${params.currency} a ete depose sur votre ${params.compte_type} N ${params.compte_no}. ${params.reference}. Baobab vous remercie</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NOTIF.SMS_SEND.TT.DR_CI</EVENT_ID>
+    <EVENT_NAME>NOTIF.SMS_SEND.TT.DR</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Vous avez retire ${params.trans_amt} ${params.currency} sur votre ${params.compte_type} N ${params.compte_no}. ${params.reference}.  Baobab vous remercie</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NOTIF.SMS_SEND.FT.CR_CI</EVENT_ID>
+    <EVENT_NAME>NOTIF.SMS_SEND.FT.CR</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Le montant de ${params.trans_amt} ${params.currency} a ete transfere sur votre ${params.compte_type} N ${params.compte_no}. ${params.reference}.  Baobab vous remercie</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>NOTIF.SMS_SEND.FT.DR_CI</EVENT_ID>
+    <EVENT_NAME>NOTIF.SMS_SEND.FT.DR</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Le montant de ${params.trans_amt} ${params.currency} a ete debite de votre ${params.compte_type} N ${params.compte_no}. ${params.reference}.  Baobab vous remercie</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>DIRECT_PLAIN_SMS_CI</EVENT_ID>
+    <EVENT_NAME>DIRECT_PLAIN_SMS</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>${params.plain_message}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>CUS.TRANSFER_CR_FR_CI</EVENT_ID>
+    <EVENT_NAME>CUS.TRANSFER_CR_FR</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Vous avez recu ${params.amount} ${params.currency} depuis le compte N ${params.account_no}. ${params.txn_id}. Baobab vous remercie</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>CUS.TRANSFER_DR_FR_CI</EVENT_ID>
+    <EVENT_NAME>CUS.TRANSFER_DR_FR</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Vous avez transfere ${params.amount} ${params.currency} vers le compte N ${params.account_no}. ${params.txn_id}. Baobab vous remercie</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>CUS.TRANSFER_WB_FR_CI</EVENT_ID>
+    <EVENT_NAME>CUS.TRANSFER_WB_FR</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Vous avez recu ${params.amount} ${params.currency} depuis le compte ${params.mno_service} N ${params.mno_number}. ${params.txn_id}. Baobab vous remercie</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>CUS.TRANSFER_BW_FR_CI</EVENT_ID>
+    <EVENT_NAME>CUS.TRANSFER_BW_FR</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Vous avez transfere ${params.amount} ${params.currency} vers le compte ${params.mno_service} N ${params.mno_number}. ${params.txn_id}. Baobab vous remercie</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>CUS.TRANSFER_CR_EN_CI</EVENT_ID>
+    <EVENT_NAME>CUS.TRANSFER_CR_EN</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Txn Alert: ${params.amount} ${params.currency} CR (${params.txn_id}) On A/C ${params.account_no}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>CUS.TRANSFER_DR_EN_CI</EVENT_ID>
+    <EVENT_NAME>CUS.TRANSFER_DR_EN</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Txn Alert: ${params.amount} ${params.currency} DR ${params.txn_id} On A/C ${params.account_no}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>CUS.TRANSFER_WB_EN_CI</EVENT_ID>
+    <EVENT_NAME>CUS.TRANSFER_WB_EN</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Txn Alert: ${params.amount} ${params.currency} CR (${params.txn_id}) On A/C ${params.account_no}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>CUS.TRANSFER_BW_EN_CI</EVENT_ID>
+    <EVENT_NAME>CUS.TRANSFER_BW_EN</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Txn Alert: ${params.amount} ${params.currency} DR ${params.txn_id} On A/C ${params.account_no}</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>CUS.TRANSFER_CR_MG_CI</EVENT_ID>
+    <EVENT_NAME>CUS.TRANSFER_CR_MG</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Ny vola ${params.amount} ${params.currency} dia nafindra tao amin ny kaontinao ${params.account_no}. ${params.txn_id} .BAOBAB BANQUE dia misaotra anao</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+  <NOTIFICATION_EVENT>
+    <EVENT_ID>CUS.TRANSFER_DR_MG_CI</EVENT_ID>
+    <EVENT_NAME>CUS.TRANSFER_DR_MG</EVENT_NAME>
+    <COUNTRY_CODE>CI</COUNTRY_CODE>
+    <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+    <SMS_TEMPLATES>
+      <TEMPLATE>
+        <LANGUAGE>FR</LANGUAGE>
+        <CONTENT>Ny vola ${params.amount} ${params.currency} dia nalaina tamin ny kaontinao ${params.account_no}.  ${params.txn_id} .MISAOTRA ANAO NY BAOBAB BANQUE</CONTENT>
+      </TEMPLATE>
+    </SMS_TEMPLATES>
+  </NOTIFICATION_EVENT>
+</NOTIFICATION_EVENTS>

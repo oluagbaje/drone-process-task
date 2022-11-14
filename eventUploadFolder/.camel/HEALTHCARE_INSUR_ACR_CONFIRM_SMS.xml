@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NOTIFICATION_EVENT>
+  <EVENT_ID>NOTIF.SMS_SEND.ACR.CONF</EVENT_ID>
+  <EVENT_NAME>NOTIF.SMS</EVENT_NAME>
+  <COUNTRY_CODE>NG</COUNTRY_CODE>
+  <DEFAULT_PRIORITY>NORMAL</DEFAULT_PRIORITY>
+  <MESSAGE_TYPE>Transactional</MESSAGE_TYPE>
+  <SMS_TEMPLATES>	
+	<TEMPLATE>
+		<LANGUAGE>EN</LANGUAGE>
+		<CONTENT>
+			Congrats! Your account is debited. Your family Hospicash and life cover is active & valid till {{dat}}. Call 08130812526 for more details.
+		</CONTENT>
+	</TEMPLATE>
+	
+	<TEMPLATE>
+		<LANGUAGE>FR</LANGUAGE>
+		<CONTENT>
+			Félicitations! Votre compte est débité. Votre assurance familiale Hospicash et vie est active et valable jusqu'au {{dat}}Appelez le 08130812526 pour plus de détails
+		</CONTENT>
+	</TEMPLATE>
+	
+	
+	
+  </SMS_TEMPLATES>
+
+</NOTIFICATION_EVENT>

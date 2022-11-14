@@ -1,0 +1,1 @@
+{"countryCode":"NG","destinationAdress":"2341065702445","eventName":"FUNDS_TRANSFER","message":"DEAR John Doe your account 2323232335 has been debited with 232. thanks","priority":3,"languageCode":"EN","templateId":"259","messageTemplate":"DEAR {{customer_name}} your account {{account_no}} has been debited with {{debit_amount}}. thanks"}

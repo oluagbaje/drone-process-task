@@ -1,0 +1,27 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "definitions":{
+      
+   },
+   "id":"registration",
+   "type":"object",
+   "properties":{
+      "droneSerialNumber":{
+         "type":"string"
+      },
+      "droneModel":{
+         "type":"string"
+      },
+ 
+      "droneState":{
+         "type":"string"
+      }
+
+   },
+   "required":[
+     "droneSerialNumber",
+      "droneModel",
+      "droneState"
+  
+   ]
+}
