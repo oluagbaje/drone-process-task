@@ -119,7 +119,7 @@ database with medication.[testingfolder/medications.csv]
   GET http://localhost:56080/v1.0/app/getListOfDrones
 ```
 
-<img src="images/listDrones.png">
+<img src="images/listDrones.PNG">
 
 #### load Drone with Available Medication
 the process involves getting the available drone to load
