@@ -92,6 +92,7 @@ the process also is continued in the SmppSessionMonitor class
 ```http
  POST localhost:56080/v1.0/app/register
 ```
+<img src="images/registerAPI">
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
