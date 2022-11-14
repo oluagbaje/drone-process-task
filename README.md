@@ -78,9 +78,9 @@ While implementing your solution **please take care of the following requirement
 there is a process in place that allow the batteries to be charge
 using a task time procedure.
 The Gateway service class runs the process
-<img src="images/chargingProcess.PNG" width="100">
+<img src="images/chargingProcess.PNG" width="50">
 At the initialiseGateway methos the process
-<img src="images/continuiousChargng.PNG">
+<img src="images/continuiousChargng.PNG" width="300">
 repository.droneBatterychargingProcess() select all the Batteries within the database table drone_process_record and adds this to the hashmap that uses the list to start the charging process
 <img src="images/batterChargeProcesMap.PNG">
 
