@@ -78,8 +78,11 @@ While implementing your solution **please take care of the following requirement
 there is a process in place that allow the batteries to be charge
 using a task time procedure.
 The Gateway service class runs the process
+<img src="images/chargingProcess.png">
 At the initialiseGateway methos the process
+<img src="images/continuiousChargng.png">
 repository.droneBatterychargingProcess() select all the Batteries within the database table drone_process_record and adds this to the hashmap that uses the list to start the charging process
+<img src="images/batterChargeProcesMap.png">
 
 
 
@@ -107,6 +110,8 @@ the process also is continued in the SmppSessionMonitor class
 ```http
   GET http://localhost:56080/v1.0/app/loadMedications
 ```
+the endpoint runs a process that will use the attached csv to update the
+database with medication.[testingfolder/medications.csv]
 
 #### List Available Drone
 
@@ -114,6 +119,7 @@ the process also is continued in the SmppSessionMonitor class
   GET http://localhost:56080/v1.0/app/getListOfDrones
 ```
 
+<img src="images/listDrones.png">
 
 #### load Drone with Available Medication
 the process involves getting the available drone to load
@@ -129,6 +135,8 @@ i.e. from LOADING TO RETURNING state.
   "sourceLocation":"Koprivshtitsa",
   "destinationLocation":"Sozopol" 
 }
+<img src="images/load.png">
+
 LOADING
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
@@ -149,6 +157,7 @@ i.e. from LOADING TO RETURNING state.
 ```http
  POST localhost:56080/v1.0/app/drone/loaded
 ```
+<img src="images/loaded.png">
 { 
   "droneSerialNumber":"AKT1000SMG",
   "medCode":"GDT6688IOP-0",
@@ -177,6 +186,9 @@ i.e. from LOADING TO RETURNING state.
   "sourceLocation":"Koprivshtitsa",
   "destinationLocation":"Sozopol" 
 }
+
+
+
 DELIVERING
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
@@ -229,11 +241,7 @@ RETURNING
 | `destinationLocation` | `string` | **Required**. Your API key |
 
 
-## Acknowledgements
 
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
 
 ## Deployment
