@@ -25,7 +25,11 @@
         "processingRequestQueue": "./processingRequestQueue",
         "pendingRequestQueue": "./pendingSMSRequests",
         "loadingRequestQueue": "./loadingStateRequests",
+        "loadedRequestQueue":"./loadedRequestQueue",
         "deliveringProcessQueue": "./deliveringProcessQueue",
+        "deliveredProcessQueue": "./deliveredProcessQueue",
+        "returningProcessQueue":"./returningProcessQueue",
+        "ProcessedQueue":"./ProcessedQueue",
         "failedRequestQueue": "./failedSMSRequests",
         "smscSubmitRetryCount": 1,
         "pendingRequestRetry": {

@@ -71,7 +71,191 @@ While implementing your solution **please take care of the following requirement
 
 ---
 
-
-
 :scroll: **END** 
+
+
+## Process of Battery Recharging
+there is a process in place that allow the batteries to be charge
+using a task time procedure.
+The Gateway service class runs the process
+At the initialiseGateway methos the process
+repository.droneBatterychargingProcess() select all the Batteries within the database table drone_process_record and adds this to the hashmap that uses the list to start the charging process
+
+
+
+SmppSessionMonitor
+the process also is continued in the SmppSessionMonitor class 
+## API Reference
+
+#### Register a New Drone
+
+```http
+ POST localhost:56080/v1.0/app/register
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `droneSerialNumber` | `string` | **Required**. Your API key |
+| `droneModel` | `string` | **Required**. Your API key |
+| `droneWeightLimit` | `double` | **Required**. Your API key |
+| `droneBatteryLevel` | `double` | **Required**. Your API key |
+| `droneState` | `string` | **Required**. Your API key |
+
+#### LOAD MEDICATION
+
+```http
+  GET http://localhost:56080/v1.0/app/loadMedications
+```
+
+#### List Available Drone
+
+```http
+  GET http://localhost:56080/v1.0/app/getListOfDrones
+```
+
+
+#### load Drone with Available Medication
+the process involves getting the available drone to load
+medication and the drone will get to to update the system with very process
+i.e. from LOADING TO RETURNING state.
+
+```http
+ POST localhost:56080/v1.0/app/drone/load
+```
+{ 
+  "droneSerialNumber":"AKT1000SMG",
+  "medCode":"GDT6688IOP-0",
+  "sourceLocation":"Koprivshtitsa",
+  "destinationLocation":"Sozopol" 
+}
+LOADING
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `droneSerialNumber` | `string` | **Required**. Your API key |
+| `medCode` | `string` | **Required**. Your API key |
+| `sourceLocation` | `string` | **Required**. Your API key |
+| `destinationLocation` | `string` | **Required**. Your API key |
+
+
+
+After the update from the IDLE state to RETURNING state
+
+#### load Drone process to update system to LOADED
+the process involves getting the available drone to load
+medication and the drone will get to to update the system with very process
+i.e. from LOADING TO RETURNING state.
+
+```http
+ POST localhost:56080/v1.0/app/drone/loaded
+```
+{ 
+  "droneSerialNumber":"AKT1000SMG",
+  "medCode":"GDT6688IOP-0",
+  "sourceLocation":"Koprivshtitsa",
+  "destinationLocation":"Sozopol" 
+}
+LOADED
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `droneSerialNumber` | `string` | **Required**. Your API key |
+| `medCode` | `string` | **Required**. Your API key |
+| `sourceLocation` | `string` | **Required**. Your API key |
+| `destinationLocation` | `string` | **Required**. Your API key |
+
+#### load Drone process to update system to DELIVERING
+the process involves getting the available drone to load
+medication and the drone will get to to update the system with very process
+i.e. from LOADING TO RETURNING state.
+
+```http
+ POST localhost:56080/v1.0/app/drone/delivering
+```
+{ 
+  "droneSerialNumber":"AKT1000SMG",
+  "medCode":"GDT6688IOP-0",
+  "sourceLocation":"Koprivshtitsa",
+  "destinationLocation":"Sozopol" 
+}
+DELIVERING
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `droneSerialNumber` | `string` | **Required**. Your API key |
+| `medCode` | `string` | **Required**. Your API key |
+| `sourceLocation` | `string` | **Required**. Your API key |
+| `destinationLocation` | `string` | **Required**. Your API key |
+#### load Drone process to update system to DELIVERED
+the process involves getting the available drone to load
+medication and the drone will get to to update the system with very process
+i.e. from LOADING TO RETURNING state.
+
+```http
+ POST localhost:56080/v1.0/app/drone/delivered
+```
+{ 
+  "droneSerialNumber":"AKT1000SMG",
+  "medCode":"GDT6688IOP-0",
+  "sourceLocation":"Koprivshtitsa",
+  "destinationLocation":"Sozopol" 
+}
+DELIVERED
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `droneSerialNumber` | `string` | **Required**. Your API key |
+| `medCode` | `string` | **Required**. Your API key |
+| `sourceLocation` | `string` | **Required**. Your API key |
+| `destinationLocation` | `string` | **Required**. Your API key |
+
+#### load Drone process to update system to DELIVERED
+the process involves getting the available drone to load
+medication and the drone will get to to update the system with very process
+i.e. from LOADING TO RETURNING state.
+
+```http
+ POST localhost:56080/v1.0/app/drone/returning
+```
+{ 
+  "droneSerialNumber":"AKT1000SMG",
+  "medCode":"GDT6688IOP-0",
+  "sourceLocation":"Koprivshtitsa",
+  "destinationLocation":"Sozopol" 
+}
+RETURNING
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `droneSerialNumber` | `string` | **Required**. Your API key |
+| `medCode` | `string` | **Required**. Your API key |
+| `sourceLocation` | `string` | **Required**. Your API key |
+| `destinationLocation` | `string` | **Required**. Your API key |
+
+
+## Acknowledgements
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
+
+## Deployment
+A package is provide that can easily be run
+the folder is dronePackage
+from the folder path
+
+Before you can run the project you need to run the script that 
+will create the table
+
+on postgre create a table
+CREATE DATABASE drone-service
+- run the script in 
+
+psql - U postgres -h localhost -p 5432 < [path to the scripts]
+[dbscripts/dronedbScripts.sql]
+
+that will create the database and the table
+To deploy this project run
+
+```bash
+  run the jar file
+  java -jar droneServicesTaskV1.jar
+
+```
 
